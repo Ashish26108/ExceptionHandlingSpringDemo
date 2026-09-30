@@ -56,7 +56,7 @@ public class ExceptionHandlingSpringBootDemoApplication {
                         new User(355,"iu","iu@gmail.com","9099387939",59),
                         new User(450,"uu","uu@gmail.com","9099567939",47),
                         new User(451,"vv","vv@gmail.com","90995677839",47),
-                        new User(451,"zz","zz@gmail.com","9099567678",77)
+                        new User(451,"zv","zv@gmail.com","9099567678",77)
 
                 ).
                 collect(Collectors.toList()));
