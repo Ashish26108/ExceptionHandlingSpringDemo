@@ -31,10 +31,15 @@ public class UserController {
 //        return new ResponseEntity<>(user, HttpStatus.OK);
 //
 //}
-     @GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable int id) throws UserNotFoundException {
+     @GetMapping("/newUser/{id}/{name}")
+    public ResponseEntity<User> getUser(@PathVariable int id,@PathVariable String name) throws UserNotFoundException {
          return ResponseEntity.ok(userService.getUser(id));
      }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<User> getUser(@PathVariable int id) throws UserNotFoundException {
+        return ResponseEntity.ok(userService.getUser(id));
+    }
 
     @GetMapping(produces= {"application/json","application/xml"})  //add dependency for xml(content negotiation)
     @ResponseBody
